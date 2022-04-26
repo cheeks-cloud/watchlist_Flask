@@ -2,12 +2,34 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  {%if tittle %}
-  <tittle> {{tittle}}</tittle> 
-  {%else %}
+  {% if title %}
+  <title> {{title}}</title> 
+  {% else %}
   <title>welcome to movie review</title>
+  {% endif %}
 </head>
 <body>
+
+  <h3> Popular Movies  </h3>
+  <ul>
+    {% for popular_movie in popular %}
+    <li> {{popular_movie.title}}</li>
+    {% endfor %}
+  </ul>
+  <h3> Upcoming Movies  </h3>
+  <ul>
+    {% for upcoming_movie in upcoming %}
+    <li> {{upcoming_movie.title}}</li>
+    {% endfor %}
+  </ul>
+  
+  <h3> now SHOWING Movies  </h3>
+  <ul>
+    {% for now_showing_movie in now_playing%}
+    <li> {{now_showing_movie.title}}</li>
+    {% endfor %}
+  </ul>
+  
   
 </body>
 </html>
@@ -22,6 +44,3 @@
 
 
 
-<!-- <h1> hello world </h1>
-
-<h2> {{message}} </h2> -->
