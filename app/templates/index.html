@@ -1,34 +1,26 @@
+{% extends 'base.html'%}
+
 {% import 'macros.html' as macro%}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  {% if title %}
-  <title> {{title}}</title> 
-  {% else %}
-  <title>welcome to movie review</title>
-  {% endif %}
-</head>
-<body>
+{ % block content %}
 
-  <h3> ----------Popular Movies-----------  </h3>
+  <h3> Popular Movies </h3>
   <ul>
    {{macro.displayMovieList(popular)}}
   </ul>
-  <h3> -----Upcoming Movies----  </h3>
+  <h3> Upcoming Movies </h3>
   <ul>
     {{macro.displayMovieList(upcoming)}}
   </ul>
   
-  <h3> now SHOWING Movies  </h3>
+  <h3> Now Showing Movies  </h3>
   <ul>
     {{macro.displayMovieList(now_showing)}}
   </ul>
   
   
-</body>
-</html>
+  {% endblock %}
+
 
 
 
