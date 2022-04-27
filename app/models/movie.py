@@ -1,9 +1,9 @@
 class Movie: #class to define movie objects
 
-  def __init__(self,id,tittle,overview,poster,vote_average,vote_count):
+  def __init__(self,id,title,overview,poster,vote_average,vote_count):
 
       self.id = id 
-      self.tittle = tittle
+      self.title = title
       self.overview = overview
       self.poster = poster
       self.vote_average = vote_average
